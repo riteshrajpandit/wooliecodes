@@ -161,7 +161,7 @@ const ProjectDetail: React.FC = () => {
                 {project.technologies.map((tech, index) => (
                   <span 
                     key={index}
-                    className="px-3 py-1 rounded-full bg-(--color-primary) bg-opacity-10 text-(--color-primary) text-sm"
+                    className="px-3 py-1 rounded-full bg-(--color-primary) bg-opacity-10 text-(--color-paper-light) text-sm"
                   >
                     {tech}
                   </span>
