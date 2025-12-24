@@ -1,8 +1,13 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+import { PrismLight as SyntaxHighlighter } from 'react-syntax-highlighter';
+import tsx from 'react-syntax-highlighter/dist/esm/languages/prism/tsx';
+import css from 'react-syntax-highlighter/dist/esm/languages/prism/css';
 import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import { X, Maximize2, Terminal, FileCode, Code2 } from 'lucide-react';
+
+SyntaxHighlighter.registerLanguage('tsx', tsx);
+SyntaxHighlighter.registerLanguage('css', css);
 
 const CodeExperience: React.FC = () => {
   const [activeTab, setActiveTab] = useState('component');
