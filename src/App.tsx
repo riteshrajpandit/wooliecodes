@@ -15,7 +15,7 @@ import '@fontsource/caveat/700.css';
 function App() {
   return (
     <ThemeProvider>
-      <BrowserRouter>
+      <BrowserRouter future={{ v7_startTransition: true }}>
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}

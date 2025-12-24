@@ -48,7 +48,7 @@ const StorySection: React.FC = () => {
   return (
     <motion.div 
       ref={containerRef}
-      className="py-20 md:py-32 bg-[color:var(--color-background)]"
+      className="relative py-20 md:py-32 bg-[color:var(--color-background)]"
       style={{ opacity, y }}
     >
       <div className="container mx-auto px-4 md:px-6">

@@ -93,7 +93,7 @@ const Projects: React.FC = () => {
                     {project.technologies.map((tech, index) => (
                       <span 
                         key={index} 
-                        className="text-xs font-medium py-1 px-2 rounded-full bg-[color:var(--color-primary)] bg-opacity-10 text-[color:var(--color-primary)]"
+                        className="text-xs font-medium py-1 px-2 rounded-full bg-[color:var(--color-primary)] bg-opacity-10 text-white"
                       >
                         {tech}
                       </span>

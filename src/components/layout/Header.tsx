@@ -117,6 +117,7 @@ const Header: React.FC = () => {
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className="md:hidden p-2"
               aria-label="Toggle menu"
+              aria-expanded={isMobileMenuOpen}
             >
               {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -140,9 +141,10 @@ const Header: React.FC = () => {
               <Link
                 key={item.path}
                 to={item.path}
+                aria-current={location.pathname === item.path ? 'page' : undefined}
                 className={`py-2 px-4 rounded-lg transition-colors ${
                   location.pathname === item.path
-                    ? 'bg-[color:var(--color-primary)] bg-opacity-10 text-[color:var(--color-primary)]'
+                    ? 'bg-[color:var(--color-primary)] text-white'
                     : 'text-[color:var(--color-text-primary)] hover:bg-opacity-5 hover:bg-[color:var(--color-primary)]'
                 }`}
               >

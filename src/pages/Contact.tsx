@@ -72,7 +72,7 @@ const Contact: React.FC = () => {
                 <div className="space-y-6">
                   <div className="flex items-start">
                     <div className="bg-[color:var(--color-primary)] bg-opacity-10 p-3 rounded-full mr-4">
-                      <Mail size={20} className="text-[color:var(--color-primary)]" />
+                      <Mail size={20} className="text-[color:var(--color-paper-light)]" />
                     </div>
                     <div>
                       <h3 className="font-medium">Email</h3>
@@ -84,7 +84,7 @@ const Contact: React.FC = () => {
                   
                   <div className="flex items-start">
                     <div className="bg-[color:var(--color-primary)] bg-opacity-10 p-3 rounded-full mr-4">
-                      <Phone size={20} className="text-[color:var(--color-primary)]" />
+                      <Phone size={20} className="text-[color:var(--color-paper-light)]" />
                     </div>
                     <div>
                       <h3 className="font-medium">Phone</h3>
@@ -96,7 +96,7 @@ const Contact: React.FC = () => {
                   
                   <div className="flex items-start">
                     <div className="bg-[color:var(--color-primary)] bg-opacity-10 p-3 rounded-full mr-4">
-                      <MapPin size={20} className="text-[color:var(--color-primary)]" />
+                      <MapPin size={20} className="text-[color:var(--color-paper-light)]" />
                     </div>
                     <div>
                       <h3 className="font-medium">Location</h3>
