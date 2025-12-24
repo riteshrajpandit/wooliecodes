@@ -20,8 +20,8 @@ const Sitemap = lazy(() => import('../pages/Sitemap'));
 const PageLoader = () => (
   <div className="min-h-screen flex items-center justify-center">
     <div className="animate-pulse flex flex-col items-center">
-      <div className="h-12 w-12 rounded-full bg-[color:var(--color-primary)] opacity-75 mb-4"></div>
-      <p className="text-[color:var(--color-text-secondary)]">Loading...</p>
+      <div className="h-12 w-12 rounded-full bg-(--color-primary) opacity-75 mb-4"></div>
+      <p className="text-(--color-text-secondary)">Loading...</p>
     </div>
   </div>
 );

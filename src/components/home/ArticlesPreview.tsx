@@ -50,13 +50,13 @@ const ArticlesPreview: React.FC = () => {
   };
 
   return (
-    <div className="py-20 md:py-32 bg-[color:var(--color-paper)]">
+    <div className="py-20 md:py-32 bg-(--color-paper)">
       <div className="container mx-auto px-4 md:px-6">
         <div className="mb-16 text-center">
           <h2 className="text-3xl md:text-5xl font-bold mb-6">
-            <span className="handwritten text-[color:var(--color-primary)]">Chapter 3:</span> Articles & Insights
+            <span className="handwritten text-(--color-primary)">Chapter 3:</span> Articles & Insights
           </h2>
-          <p className="text-[color:var(--color-text-secondary)] max-w-2xl mx-auto text-lg">
+          <p className="text-(--color-text-secondary) max-w-2xl mx-auto text-lg">
             Thoughts, tutorials, and insights from years of frontend development experience. Join me as I explore the ever-evolving world of web technologies.
           </p>
         </div>
@@ -72,7 +72,7 @@ const ArticlesPreview: React.FC = () => {
             <motion.div 
               key={article.id}
               variants={item}
-              className="bg-[color:var(--color-background)] rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow flex flex-col h-full book-page"
+              className="bg-(--color-background) rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow flex flex-col h-full book-page"
             >
               <div className="relative h-48 overflow-hidden">
                 <img 
@@ -81,8 +81,8 @@ const ArticlesPreview: React.FC = () => {
                   className="w-full h-full object-cover transition-transform duration-500 hover:scale-110" 
                 />
               </div>
-              <div className="p-6 flex flex-col flex-grow">
-                <div className="flex items-center text-[color:var(--color-text-secondary)] text-sm mb-3">
+              <div className="p-6 flex flex-col grow">
+                <div className="flex items-center text-(--color-text-secondary) text-sm mb-3">
                   <div className="flex items-center mr-4">
                     <Calendar size={14} className="mr-1" />
                     <span>{article.date}</span>
@@ -94,21 +94,21 @@ const ArticlesPreview: React.FC = () => {
                 </div>
                 
                 <h3 className="text-xl font-bold mb-3">{article.title}</h3>
-                <p className="text-[color:var(--color-text-secondary)] mb-4 flex-grow">{article.excerpt}</p>
+                <p className="text-(--color-text-secondary) mb-4 grow">{article.excerpt}</p>
                 
                 <div className="flex justify-between items-center mt-auto pt-4">
                   <a 
                     href={article.mediumLink} 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="text-sm text-[color:var(--color-text-secondary)] hover:text-[color:var(--color-primary)] transition-colors"
+                    className="text-sm text-(--color-text-secondary) hover:text-(--color-primary) transition-colors"
                   >
                     Read on Medium
                   </a>
                   
                   <Link 
                     to={`/articles/${article.id}`}
-                    className="flex items-center text-[color:var(--color-primary)] hover:underline font-medium"
+                    className="flex items-center text-(--color-primary) hover:underline font-medium"
                   >
                     <span>Read more</span>
                     <ArrowRight size={16} className="ml-1" />

@@ -50,7 +50,7 @@ const Projects: React.FC = () => {
   };
 
   return (
-    <div className="py-20 md:py-32 bg-[color:var(--color-background)]">
+    <div className="py-20 md:py-32 bg-(--color-background)">
       <div className="container mx-auto px-4 md:px-6">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
@@ -59,9 +59,9 @@ const Projects: React.FC = () => {
           className="max-w-6xl mx-auto"
         >
           <h1 className="text-4xl md:text-5xl font-bold mb-6">
-            <span className="handwritten text-[color:var(--color-primary)]">My Projects</span>
+            <span className="handwritten text-(--color-primary)">My Projects</span>
           </h1>
-          <p className="text-[color:var(--color-text-secondary)] text-lg mb-12 max-w-2xl">
+          <p className="text-(--color-text-secondary) text-lg mb-12 max-w-2xl">
             A collection of my most significant work and contributions to the world of web development.
             Each project represents a unique challenge and solution.
           </p>
@@ -76,7 +76,7 @@ const Projects: React.FC = () => {
               <motion.div 
                 key={project.id}
                 variants={item}
-                className="bg-[color:var(--color-paper)] rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow"
+                className="bg-(--color-paper) rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow"
               >
                 <div className="relative h-48 overflow-hidden">
                   <img 
@@ -87,13 +87,13 @@ const Projects: React.FC = () => {
                 </div>
                 <div className="p-6">
                   <h3 className="text-xl font-bold mb-2">{project.title}</h3>
-                  <p className="text-[color:var(--color-text-secondary)] mb-4">{project.description}</p>
+                  <p className="text-(--color-text-secondary) mb-4">{project.description}</p>
                   
                   <div className="flex flex-wrap gap-2 mb-6">
                     {project.technologies.map((tech, index) => (
                       <span 
                         key={index} 
-                        className="text-xs font-medium py-1 px-2 rounded-full bg-[color:var(--color-primary)] bg-opacity-10 text-white"
+                        className="text-xs font-medium py-1 px-2 rounded-full bg-(--color-primary) bg-opacity-10 text-white"
                       >
                         {tech}
                       </span>
@@ -106,7 +106,7 @@ const Projects: React.FC = () => {
                         href={project.github} 
                         target="_blank" 
                         rel="noopener noreferrer"
-                        className="p-2 rounded-full bg-[color:var(--color-background)] hover:bg-[color:var(--color-primary)] hover:text-white transition-colors"
+                        className="p-2 rounded-full bg-(--color-background) hover:bg-(--color-primary) hover:text-white transition-colors"
                       >
                         <Github size={18} />
                       </a>
@@ -114,7 +114,7 @@ const Projects: React.FC = () => {
                         href={project.live} 
                         target="_blank" 
                         rel="noopener noreferrer"
-                        className="p-2 rounded-full bg-[color:var(--color-background)] hover:bg-[color:var(--color-primary)] hover:text-white transition-colors"
+                        className="p-2 rounded-full bg-(--color-background) hover:bg-(--color-primary) hover:text-white transition-colors"
                       >
                         <ExternalLink size={18} />
                       </a>
@@ -122,7 +122,7 @@ const Projects: React.FC = () => {
                     
                     <Link 
                       to={`/projects/${project.id}`}
-                      className="text-[color:var(--color-primary)] hover:underline font-medium"
+                      className="text-(--color-primary) hover:underline font-medium"
                     >
                       View Details
                     </Link>

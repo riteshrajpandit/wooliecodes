@@ -23,7 +23,7 @@ const Hero: React.FC = () => {
     >
       <div className="absolute inset-0 -z-10">
         {/* Gradient background */}
-        <div className="absolute inset-0 bg-gradient-to-b from-[color:var(--color-primary)] from-5% via-[color:var(--color-background)] to-[color:var(--color-background)] opacity-10" />
+        <div className="absolute inset-0 bg-linear-to-b from-(--color-primary) from-5% via-(--color-background) to-(--color-background) opacity-10" />
         
         {/* Code particles (decorative) */}
         <div className="absolute inset-0 overflow-hidden opacity-5">
@@ -58,13 +58,13 @@ const Hero: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <span className="handwritten text-[color:var(--color-primary)]">The Journey of</span>
+            <span className="handwritten text-(--color-primary)">The Journey of</span>
             <br />
             <span>A Frontend Visionary</span>
           </motion.h1>
           
           <motion.p 
-            className="text-xl md:text-2xl text-[color:var(--color-text-secondary)] mb-10 max-w-2xl mx-auto"
+            className="text-xl md:text-2xl text-(--color-text-secondary) mb-10 max-w-2xl mx-auto"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
@@ -90,12 +90,12 @@ const Hero: React.FC = () => {
       
       {/* Scroll indicator */}
       <motion.div 
-        className="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex flex-col items-center"
+        className="absolute bottom-20 left-1/2 transform -translate-x-1/2 flex flex-col items-center"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.2, duration: 0.8 }}
       >
-        <span className="text-sm mb-2 text-[color:var(--color-text-secondary)]">Scroll to explore</span>
+        <span className="text-sm text-(--color-text-secondary)">Scroll to explore</span>
         <motion.div
           animate={{ y: [0, 10, 0] }}
           transition={{ repeat: Infinity, duration: 1.5 }}

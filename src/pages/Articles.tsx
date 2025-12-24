@@ -53,7 +53,7 @@ const Articles: React.FC = () => {
   };
 
   return (
-    <div className="py-20 md:py-32 bg-[color:var(--color-background)]">
+    <div className="py-20 md:py-32 bg-(--color-background)">
       <div className="container mx-auto px-4 md:px-6">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
@@ -62,9 +62,9 @@ const Articles: React.FC = () => {
           className="max-w-6xl mx-auto"
         >
           <h1 className="text-4xl md:text-5xl font-bold mb-6">
-            <span className="handwritten text-[color:var(--color-primary)]">Articles</span>
+            <span className="handwritten text-(--color-primary)">Articles</span>
           </h1>
-          <p className="text-[color:var(--color-text-secondary)] text-lg mb-12 max-w-2xl">
+          <p className="text-(--color-text-secondary) text-lg mb-12 max-w-2xl">
             Thoughts, insights, and tutorials about frontend development and design.
             Join me as I explore the ever-evolving world of web technologies.
           </p>
@@ -79,7 +79,7 @@ const Articles: React.FC = () => {
               <motion.article 
                 key={article.id}
                 variants={item}
-                className="bg-[color:var(--color-paper)] rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow flex flex-col"
+                className="bg-(--color-paper) rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow flex flex-col"
               >
                 <div className="relative h-48 overflow-hidden">
                   <img 
@@ -87,13 +87,13 @@ const Articles: React.FC = () => {
                     alt={article.title} 
                     className="w-full h-full object-cover transition-transform duration-500 hover:scale-110" 
                   />
-                  <div className="absolute top-4 right-4 bg-[color:var(--color-primary)] text-white text-sm px-3 py-1 rounded-full">
+                  <div className="absolute top-4 right-4 bg-(--color-primary) text-white text-sm px-3 py-1 rounded-full">
                     {article.category}
                   </div>
                 </div>
                 
-                <div className="p-6 flex flex-col flex-grow">
-                  <div className="flex items-center text-[color:var(--color-text-secondary)] text-sm mb-3">
+                <div className="p-6 flex flex-col grow">
+                  <div className="flex items-center text-(--color-text-secondary) text-sm mb-3">
                     <div className="flex items-center mr-4">
                       <Calendar size={14} className="mr-1" />
                       <span>{article.date}</span>
@@ -105,7 +105,7 @@ const Articles: React.FC = () => {
                   </div>
                   
                   <h2 className="text-xl font-bold mb-3">{article.title}</h2>
-                  <p className="text-[color:var(--color-text-secondary)] mb-6 flex-grow">
+                  <p className="text-(--color-text-secondary) mb-6 grow">
                     {article.excerpt}
                   </p>
                   
@@ -114,14 +114,14 @@ const Articles: React.FC = () => {
                       href={article.mediumLink} 
                       target="_blank" 
                       rel="noopener noreferrer"
-                      className="text-sm text-[color:var(--color-text-secondary)] hover:text-[color:var(--color-primary)] transition-colors"
+                      className="text-sm text-(--color-text-secondary) hover:text-(--color-primary) transition-colors"
                     >
                       Read on Medium
                     </a>
                     
                     <Link 
                       to={`/articles/${article.id}`}
-                      className="flex items-center text-[color:var(--color-primary)] hover:underline font-medium"
+                      className="flex items-center text-(--color-primary) hover:underline font-medium"
                     >
                       <span>Read more</span>
                       <ArrowRight size={16} className="ml-1" />

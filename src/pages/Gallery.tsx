@@ -60,7 +60,7 @@ const Gallery: React.FC = () => {
   };
 
   return (
-    <div className="py-20 md:py-32 bg-[color:var(--color-background)]">
+    <div className="py-20 md:py-32 bg-(--color-background)">
       <div className="container mx-auto px-4 md:px-6">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
@@ -69,9 +69,9 @@ const Gallery: React.FC = () => {
           className="max-w-6xl mx-auto"
         >
           <h1 className="text-4xl md:text-5xl font-bold mb-6">
-            <span className="handwritten text-[color:var(--color-primary)]">Gallery</span>
+            <span className="handwritten text-(--color-primary)">Gallery</span>
           </h1>
-          <p className="text-[color:var(--color-text-secondary)] text-lg mb-12 max-w-2xl">
+          <p className="text-(--color-text-secondary) text-lg mb-12 max-w-2xl">
             A collection of my photography work, capturing moments and perspectives through the lens.
           </p>
 
@@ -95,7 +95,7 @@ const Gallery: React.FC = () => {
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                   />
                   <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-opacity duration-300" />
-                  <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <div className="absolute bottom-0 left-0 right-0 p-4 bg-linear-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <p className="text-white text-sm font-medium">{photo.category}</p>
                     <h3 className="text-white text-lg font-bold">{photo.title}</h3>
                   </div>

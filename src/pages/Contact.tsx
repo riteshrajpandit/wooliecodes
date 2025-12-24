@@ -42,7 +42,7 @@ const Contact: React.FC = () => {
   };
   
   return (
-    <div className="py-20 md:py-32 bg-[color:var(--color-background)]">
+    <div className="py-20 md:py-32 bg-(--color-background)">
       <div className="container mx-auto px-4 md:px-6">
         <div className="max-w-5xl mx-auto">
           <motion.div 
@@ -52,9 +52,9 @@ const Contact: React.FC = () => {
             className="mb-16 text-center"
           >
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              <span className="handwritten text-[color:var(--color-primary)]">Let's Connect</span>
+              <span className="handwritten text-(--color-primary)">Let's Connect</span>
             </h1>
-            <p className="text-[color:var(--color-text-secondary)] max-w-2xl mx-auto text-lg">
+            <p className="text-(--color-text-secondary) max-w-2xl mx-auto text-lg">
               Have a project in mind or just want to say hello? I'd love to hear from you. Fill out the form below or reach out through one of the provided channels.
             </p>
           </motion.div>
@@ -66,41 +66,41 @@ const Contact: React.FC = () => {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="lg:col-span-2 space-y-8"
             >
-              <div className="bg-[color:var(--color-paper)] p-6 rounded-lg shadow-md">
+              <div className="bg-(--color-paper) p-6 rounded-lg shadow-md">
                 <h2 className="text-2xl font-bold mb-6">Contact Information</h2>
                 
                 <div className="space-y-6">
                   <div className="flex items-start">
-                    <div className="bg-[color:var(--color-primary)] bg-opacity-10 p-3 rounded-full mr-4">
-                      <Mail size={20} className="text-[color:var(--color-paper-light)]" />
+                    <div className="bg-(--color-primary) bg-opacity-10 p-3 rounded-full mr-4">
+                      <Mail size={20} className="text-(--color-paper-light)" />
                     </div>
                     <div>
                       <h3 className="font-medium">Email</h3>
-                      <a href="mailto:contact@devjourney.com" className="text-[color:var(--color-primary)] hover:underline">
+                      <a href="mailto:contact@devjourney.com" className="text-(--color-primary) hover:underline">
                         contact@devjourney.com
                       </a>
                     </div>
                   </div>
                   
                   <div className="flex items-start">
-                    <div className="bg-[color:var(--color-primary)] bg-opacity-10 p-3 rounded-full mr-4">
-                      <Phone size={20} className="text-[color:var(--color-paper-light)]" />
+                    <div className="bg-(--color-primary) bg-opacity-10 p-3 rounded-full mr-4">
+                      <Phone size={20} className="text-(--color-paper-light)" />
                     </div>
                     <div>
                       <h3 className="font-medium">Phone</h3>
-                      <a href="tel:+11234567890" className="text-[color:var(--color-primary)] hover:underline">
+                      <a href="tel:+11234567890" className="text-(--color-primary) hover:underline">
                         +1 (123) 456-7890
                       </a>
                     </div>
                   </div>
                   
                   <div className="flex items-start">
-                    <div className="bg-[color:var(--color-primary)] bg-opacity-10 p-3 rounded-full mr-4">
-                      <MapPin size={20} className="text-[color:var(--color-paper-light)]" />
+                    <div className="bg-(--color-primary) bg-opacity-10 p-3 rounded-full mr-4">
+                      <MapPin size={20} className="text-(--color-paper-light)" />
                     </div>
                     <div>
                       <h3 className="font-medium">Location</h3>
-                      <p className="text-[color:var(--color-text-secondary)]">San Francisco, CA</p>
+                      <p className="text-(--color-text-secondary)">San Francisco, CA</p>
                     </div>
                   </div>
                 </div>
@@ -112,7 +112,7 @@ const Contact: React.FC = () => {
                       href="https://linkedin.com" 
                       target="_blank" 
                       rel="noopener noreferrer"
-                      className="bg-[color:var(--color-background)] p-3 rounded-full hover:bg-[color:var(--color-primary)] hover:text-white transition-colors"
+                      className="bg-(--color-background) p-3 rounded-full hover:bg-(--color-primary) hover:text-white transition-colors"
                       aria-label="LinkedIn"
                     >
                       <Linkedin size={18} />
@@ -121,7 +121,7 @@ const Contact: React.FC = () => {
                       href="https://github.com" 
                       target="_blank" 
                       rel="noopener noreferrer"
-                      className="bg-[color:var(--color-background)] p-3 rounded-full hover:bg-[color:var(--color-primary)] hover:text-white transition-colors"
+                      className="bg-(--color-background) p-3 rounded-full hover:bg-(--color-primary) hover:text-white transition-colors"
                       aria-label="GitHub"
                     >
                       <Github size={18} />
@@ -130,7 +130,7 @@ const Contact: React.FC = () => {
                       href="https://twitter.com" 
                       target="_blank" 
                       rel="noopener noreferrer"
-                      className="bg-[color:var(--color-background)] p-3 rounded-full hover:bg-[color:var(--color-primary)] hover:text-white transition-colors"
+                      className="bg-(--color-background) p-3 rounded-full hover:bg-(--color-primary) hover:text-white transition-colors"
                       aria-label="Twitter"
                     >
                       <Twitter size={18} />
@@ -139,9 +139,9 @@ const Contact: React.FC = () => {
                 </div>
               </div>
               
-              <div className="bg-[color:var(--color-paper)] p-6 rounded-lg shadow-md">
+              <div className="bg-(--color-paper) p-6 rounded-lg shadow-md">
                 <h2 className="text-2xl font-bold mb-4">Office Hours</h2>
-                <p className="text-[color:var(--color-text-secondary)] mb-4">
+                <p className="text-(--color-text-secondary) mb-4">
                   I'm available for meetings and calls during the following hours:
                 </p>
                 
@@ -168,14 +168,14 @@ const Contact: React.FC = () => {
               transition={{ duration: 0.8, delay: 0.4 }}
               className="lg:col-span-3"
             >
-              <div className="bg-[color:var(--color-paper)] p-6 md:p-8 rounded-lg shadow-md">
+              <div className="bg-(--color-paper) p-6 md:p-8 rounded-lg shadow-md">
                 <h2 className="text-2xl font-bold mb-6">Send a Message</h2>
                 
                 {!submitted ? (
                   <form onSubmit={handleSubmit} className="space-y-6">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <div>
-                        <label htmlFor="name" className="block text-sm font-medium text-[color:var(--color-text-secondary)] mb-1">
+                        <label htmlFor="name" className="block text-sm font-medium text-(--color-text-secondary) mb-1">
                           Name
                         </label>
                         <input
@@ -185,12 +185,12 @@ const Contact: React.FC = () => {
                           value={formState.name}
                           onChange={handleChange}
                           required
-                          className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[color:var(--color-primary)] focus:border-transparent outline-none transition-all bg-white dark:bg-gray-800"
+                          className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-(--color-primary) focus:border-transparent outline-none transition-all bg-white dark:bg-gray-800"
                         />
                       </div>
                       
                       <div>
-                        <label htmlFor="email" className="block text-sm font-medium text-[color:var(--color-text-secondary)] mb-1">
+                        <label htmlFor="email" className="block text-sm font-medium text-(--color-text-secondary) mb-1">
                           Email
                         </label>
                         <input
@@ -200,13 +200,13 @@ const Contact: React.FC = () => {
                           value={formState.email}
                           onChange={handleChange}
                           required
-                          className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[color:var(--color-primary)] focus:border-transparent outline-none transition-all bg-white dark:bg-gray-800"
+                          className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-(--color-primary) focus:border-transparent outline-none transition-all bg-white dark:bg-gray-800"
                         />
                       </div>
                     </div>
                     
                     <div>
-                      <label htmlFor="subject" className="block text-sm font-medium text-[color:var(--color-text-secondary)] mb-1">
+                      <label htmlFor="subject" className="block text-sm font-medium text-(--color-text-secondary) mb-1">
                         Subject
                       </label>
                       <input
@@ -216,12 +216,12 @@ const Contact: React.FC = () => {
                         value={formState.subject}
                         onChange={handleChange}
                         required
-                        className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[color:var(--color-primary)] focus:border-transparent outline-none transition-all bg-white dark:bg-gray-800"
+                        className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-(--color-primary) focus:border-transparent outline-none transition-all bg-white dark:bg-gray-800"
                       />
                     </div>
                     
                     <div>
-                      <label htmlFor="message" className="block text-sm font-medium text-[color:var(--color-text-secondary)] mb-1">
+                      <label htmlFor="message" className="block text-sm font-medium text-(--color-text-secondary) mb-1">
                         Message
                       </label>
                       <textarea
@@ -231,7 +231,7 @@ const Contact: React.FC = () => {
                         onChange={handleChange}
                         required
                         rows={6}
-                        className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[color:var(--color-primary)] focus:border-transparent outline-none transition-all bg-white dark:bg-gray-800"
+                        className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-(--color-primary) focus:border-transparent outline-none transition-all bg-white dark:bg-gray-800"
                       />
                     </div>
                     
@@ -269,17 +269,17 @@ const Contact: React.FC = () => {
                     animate={{ opacity: 1, y: 0 }}
                     className="text-center py-12"
                   >
-                    <div className="text-[color:var(--color-primary)] mb-6">
+                    <div className="text-(--color-primary) mb-6">
                       <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mx-auto">
                         <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
                         <polyline points="22 4 12 14.01 9 11.01"></polyline>
                       </svg>
                     </div>
                     <h3 className="text-2xl font-bold mb-4">Message Sent Successfully!</h3>
-                    <p className="text-[color:var(--color-text-secondary)] text-lg mb-6">
+                    <p className="text-(--color-text-secondary) text-lg mb-6">
                       Thank you for reaching out. I'll get back to you as soon as possible.
                     </p>
-                    <div className="handwritten text-lg text-[color:var(--color-primary)]">
+                    <div className="handwritten text-lg text-(--color-primary)">
                       Looking forward to connecting!
                     </div>
                   </motion.div>

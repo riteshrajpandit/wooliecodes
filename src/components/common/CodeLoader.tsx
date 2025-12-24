@@ -143,7 +143,7 @@ const CodeLoader: React.FC<CodeLoaderProps> = ({ onFinish }) => {
 
   return (
     <motion.div
-      className="fixed inset-0 z-[100] flex items-center justify-center bg-[#1e1e1e] font-mono text-sm md:text-base overflow-hidden"
+      className="fixed inset-0 z-100 flex items-center justify-center bg-[#1e1e1e] font-mono text-sm md:text-base overflow-hidden"
       initial={{ opacity: 1 }}
       exit={{ opacity: 0, y: -50 }}
       transition={{ duration: 0.5 }}

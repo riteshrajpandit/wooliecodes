@@ -5,7 +5,7 @@ import { Home, ArrowLeft } from 'lucide-react';
 
 const NotFound: React.FC = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-[color:var(--color-background)]">
+    <div className="min-h-screen flex items-center justify-center bg-(--color-background)">
       <div className="container mx-auto px-4 md:px-6 py-12">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
@@ -21,9 +21,9 @@ const NotFound: React.FC = () => {
               className="inline-block"
             >
               <div className="text-[120px] font-bold leading-none">
-                <span className="text-[color:var(--color-primary)]">4</span>
-                <span className="text-[color:var(--color-accent)]">0</span>
-                <span className="text-[color:var(--color-primary)]">4</span>
+                <span className="text-(--color-primary)">4</span>
+                <span className="text-(--color-accent)">0</span>
+                <span className="text-(--color-primary)">4</span>
               </div>
             </motion.div>
             
@@ -33,7 +33,7 @@ const NotFound: React.FC = () => {
               transition={{ delay: 0.4, duration: 0.8 }}
             >
               <h1 className="text-3xl md:text-4xl font-bold mb-6">Page Not Found</h1>
-              <p className="text-[color:var(--color-text-secondary)] text-lg mb-8 max-w-lg mx-auto">
+              <p className="text-(--color-text-secondary) text-lg mb-8 max-w-lg mx-auto">
                 The page you're looking for doesn't exist or has been moved. Don't worry, even the best developers get lost in their code sometimes.
               </p>
               
@@ -59,8 +59,8 @@ const NotFound: React.FC = () => {
             transition={{ delay: 0.8, duration: 0.5 }}
             className="mt-16"
           >
-            <div className="p-6 bg-[color:var(--color-paper)] rounded-lg shadow-md inline-block">
-              <p className="handwritten text-[color:var(--color-primary)] text-xl">
+            <div className="p-6 bg-(--color-paper) rounded-lg shadow-md inline-block">
+              <p className="handwritten text-(--color-primary) text-xl">
                 The journey continues elsewhere...
               </p>
             </div>

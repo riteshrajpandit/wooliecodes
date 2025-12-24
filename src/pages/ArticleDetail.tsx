@@ -104,11 +104,11 @@ const ArticleDetail: React.FC = () => {
 
   if (!article) {
     return (
-      <div className="py-20 md:py-32 bg-[color:var(--color-background)]">
+      <div className="py-20 md:py-32 bg-(--color-background)">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center">
             <h1 className="text-4xl font-bold mb-4">Article Not Found</h1>
-            <Link to="/articles" className="text-[color:var(--color-primary)] hover:underline">
+            <Link to="/articles" className="text-(--color-primary) hover:underline">
               Back to Articles
             </Link>
           </div>
@@ -118,7 +118,7 @@ const ArticleDetail: React.FC = () => {
   }
 
   return (
-    <div className="py-20 md:py-32 bg-[color:var(--color-background)]">
+    <div className="py-20 md:py-32 bg-(--color-background)">
       <div className="container mx-auto px-4 md:px-6">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
@@ -128,20 +128,20 @@ const ArticleDetail: React.FC = () => {
         >
           <Link 
             to="/articles"
-            className="inline-flex items-center text-[color:var(--color-text-secondary)] hover:text-[color:var(--color-primary)] mb-8"
+            className="inline-flex items-center text-(--color-text-secondary) hover:text-(--color-primary) mb-8"
           >
             <ArrowLeft size={20} className="mr-2" />
             Back to Articles
           </Link>
 
-          <article className="bg-[color:var(--color-paper)] rounded-lg overflow-hidden shadow-xl">
+          <article className="bg-(--color-paper) rounded-lg overflow-hidden shadow-xl">
             <div className="relative h-[400px]">
               <img 
                 src={article.image} 
                 alt={article.title}
                 className="w-full h-full object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+              <div className="absolute inset-0 bg-linear-to-t from-black/50 to-transparent" />
               <div className="absolute bottom-0 left-0 right-0 p-8">
                 <div className="flex items-center space-x-4 text-white mb-4">
                   <div className="flex items-center">
@@ -171,7 +171,7 @@ const ArticleDetail: React.FC = () => {
                 />
                 <div>
                   <h3 className="font-bold">{article.author.name}</h3>
-                  <p className="text-[color:var(--color-text-secondary)] text-sm">
+                  <p className="text-(--color-text-secondary) text-sm">
                     {article.author.role}
                   </p>
                 </div>
@@ -181,7 +181,7 @@ const ArticleDetail: React.FC = () => {
                 {article.tags.map((tag, index) => (
                   <span 
                     key={index}
-                    className="px-3 py-1 rounded-full bg-[color:var(--color-primary)] bg-opacity-10 text-[color:var(--color-primary)] text-sm"
+                    className="px-3 py-1 rounded-full bg-(--color-primary) bg-opacity-10 text-(--color-primary) text-sm"
                   >
                     {tag}
                   </span>
@@ -190,7 +190,7 @@ const ArticleDetail: React.FC = () => {
 
               <div className="prose prose-lg dark:prose-invert max-w-none mb-8">
                 {article.content.split('\n\n').map((paragraph, index) => (
-                  <p key={index} className="text-[color:var(--color-text-secondary)] mb-4">
+                  <p key={index} className="text-(--color-text-secondary) mb-4">
                     {paragraph}
                   </p>
                 ))}

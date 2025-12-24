@@ -104,11 +104,11 @@ const ProjectDetail: React.FC = () => {
 
   if (!project) {
     return (
-      <div className="py-20 md:py-32 bg-[color:var(--color-background)]">
+      <div className="py-20 md:py-32 bg-(--color-background)">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center">
             <h1 className="text-4xl font-bold mb-4">Project Not Found</h1>
-            <Link to="/projects" className="text-[color:var(--color-primary)] hover:underline">
+            <Link to="/projects" className="text-(--color-primary) hover:underline">
               Back to Projects
             </Link>
           </div>
@@ -118,7 +118,7 @@ const ProjectDetail: React.FC = () => {
   }
 
   return (
-    <div className="py-20 md:py-32 bg-[color:var(--color-background)]">
+    <div className="py-20 md:py-32 bg-(--color-background)">
       <div className="container mx-auto px-4 md:px-6">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
@@ -128,20 +128,20 @@ const ProjectDetail: React.FC = () => {
         >
           <Link 
             to="/projects"
-            className="inline-flex items-center text-[color:var(--color-text-secondary)] hover:text-[color:var(--color-primary)] mb-8"
+            className="inline-flex items-center text-(--color-text-secondary) hover:text-(--color-primary) mb-8"
           >
             <ArrowLeft size={20} className="mr-2" />
             Back to Projects
           </Link>
 
-          <div className="bg-[color:var(--color-paper)] rounded-lg overflow-hidden shadow-xl">
+          <div className="bg-(--color-paper) rounded-lg overflow-hidden shadow-xl">
             <div className="relative h-[400px]">
               <img 
                 src={project.image} 
                 alt={project.title}
                 className="w-full h-full object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+              <div className="absolute inset-0 bg-linear-to-t from-black/50 to-transparent" />
               <div className="absolute bottom-0 left-0 right-0 p-8">
                 <div className="flex items-center text-white mb-4">
                   <Calendar size={16} className="mr-2" />
@@ -161,7 +161,7 @@ const ProjectDetail: React.FC = () => {
                 {project.technologies.map((tech, index) => (
                   <span 
                     key={index}
-                    className="px-3 py-1 rounded-full bg-[color:var(--color-primary)] bg-opacity-10 text-[color:var(--color-primary)] text-sm"
+                    className="px-3 py-1 rounded-full bg-(--color-primary) bg-opacity-10 text-(--color-primary) text-sm"
                   >
                     {tech}
                   </span>
@@ -170,7 +170,7 @@ const ProjectDetail: React.FC = () => {
 
               <div className="prose prose-lg dark:prose-invert max-w-none mb-8">
                 <h2 className="text-2xl font-bold mb-4">Project Overview</h2>
-                <p className="text-[color:var(--color-text-secondary)]">
+                <p className="text-(--color-text-secondary)">
                   {project.fullDescription}
                 </p>
 
@@ -179,8 +179,8 @@ const ProjectDetail: React.FC = () => {
                     <h3 className="text-xl font-bold mb-4">Key Features</h3>
                     <ul className="space-y-2">
                       {project.features.map((feature, index) => (
-                        <li key={index} className="flex items-center text-[color:var(--color-text-secondary)]">
-                          <span className="w-2 h-2 rounded-full bg-[color:var(--color-primary)] mr-3" />
+                        <li key={index} className="flex items-center text-(--color-text-secondary)">
+                          <span className="w-2 h-2 rounded-full bg-(--color-primary) mr-3" />
                           {feature}
                         </li>
                       ))}
@@ -190,8 +190,8 @@ const ProjectDetail: React.FC = () => {
                     <h3 className="text-xl font-bold mb-4">Technical Challenges</h3>
                     <ul className="space-y-2">
                       {project.challenges.map((challenge, index) => (
-                        <li key={index} className="flex items-center text-[color:var(--color-text-secondary)]">
-                          <span className="w-2 h-2 rounded-full bg-[color:var(--color-accent)] mr-3" />
+                        <li key={index} className="flex items-center text-(--color-text-secondary)">
+                          <span className="w-2 h-2 rounded-full bg-(--color-accent) mr-3" />
                           {challenge}
                         </li>
                       ))}
@@ -200,20 +200,20 @@ const ProjectDetail: React.FC = () => {
                 </div>
 
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4 my-8">
-                  <div className="bg-[color:var(--color-background)] p-4 rounded-lg">
-                    <h4 className="text-sm text-[color:var(--color-text-secondary)]">Role</h4>
+                  <div className="bg-(--color-background) p-4 rounded-lg">
+                    <h4 className="text-sm text-(--color-text-secondary)">Role</h4>
                     <p className="font-bold">{project.role}</p>
                   </div>
-                  <div className="bg-[color:var(--color-background)] p-4 rounded-lg">
-                    <h4 className="text-sm text-[color:var(--color-text-secondary)]">Duration</h4>
+                  <div className="bg-(--color-background) p-4 rounded-lg">
+                    <h4 className="text-sm text-(--color-text-secondary)">Duration</h4>
                     <p className="font-bold">{project.duration}</p>
                   </div>
-                  <div className="bg-[color:var(--color-background)] p-4 rounded-lg">
-                    <h4 className="text-sm text-[color:var(--color-text-secondary)]">Completed</h4>
+                  <div className="bg-(--color-background) p-4 rounded-lg">
+                    <h4 className="text-sm text-(--color-text-secondary)">Completed</h4>
                     <p className="font-bold">{project.date}</p>
                   </div>
-                  <div className="bg-[color:var(--color-background)] p-4 rounded-lg">
-                    <h4 className="text-sm text-[color:var(--color-text-secondary)]">Tech Stack</h4>
+                  <div className="bg-(--color-background) p-4 rounded-lg">
+                    <h4 className="text-sm text-(--color-text-secondary)">Tech Stack</h4>
                     <p className="font-bold">{project.technologies.length} Technologies</p>
                   </div>
                 </div>

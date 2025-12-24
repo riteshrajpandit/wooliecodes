@@ -178,13 +178,13 @@ Connected successfully!`
   };
 
   return (
-    <div className="py-20 md:py-32 bg-[color:var(--color-background)]">
+    <div className="py-20 md:py-32 bg-(--color-background)">
       <div className="container mx-auto px-4 md:px-6">
         <div className="mb-16 text-center">
           <h2 className="text-3xl md:text-5xl font-bold mb-6">
-            <span className="handwritten text-[color:var(--color-primary)]">Chapter 4:</span> Coding Experience
+            <span className="handwritten text-(--color-primary)">Chapter 4:</span> Coding Experience
           </h2>
-          <p className="text-[color:var(--color-text-secondary)] max-w-2xl mx-auto text-lg">
+          <p className="text-(--color-text-secondary) max-w-2xl mx-auto text-lg">
             A glimpse into my development process. Clean code, modern practices, and attention to detail.
           </p>
         </div>
@@ -253,7 +253,7 @@ Connected successfully!`
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.7, delay: 0.3 }}
-            className="mt-8 text-center text-[color:var(--color-text-secondary)]"
+            className="mt-8 text-center text-(--color-text-secondary)"
           >
             <p className="handwritten text-lg">Clean, maintainable code is my passion</p>
           </motion.div>

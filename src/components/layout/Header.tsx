@@ -37,7 +37,7 @@ const Header: React.FC = () => {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled || isMobileMenuOpen
-          ? 'bg-[color:var(--color-paper)] shadow-md py-4'
+          ? 'bg-(--color-paper) shadow-md py-4'
           : 'bg-transparent py-6'
       }`}
     >
@@ -45,9 +45,9 @@ const Header: React.FC = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link to="/" className="text-2xl font-bold flex items-center">
-            <span className="code text-[color:var(--color-primary)]">&lt;</span>
-            <span className="mx-1">DevJourney</span>
-            <span className="code text-[color:var(--color-primary)]">/&gt;</span>
+            <span className="code text-(--color-primary)">&lt;</span>
+            <span className="mx-1">WoolieCodes</span>
+            <span className="code text-(--color-primary)">/&gt;</span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -56,17 +56,17 @@ const Header: React.FC = () => {
               <Link
                 key={item.path}
                 to={item.path}
-                className={`relative py-2 transition-colors hover:text-[color:var(--color-primary)] ${
+                className={`relative py-2 transition-colors hover:text-(--color-primary) ${
                   location.pathname === item.path
-                    ? 'text-[color:var(--color-primary)]'
-                    : 'text-[color:var(--color-text-primary)]'
+                    ? 'text-(--color-primary)'
+                    : 'text-(--color-text-primary)'
                 }`}
               >
                 {item.name}
                 {location.pathname === item.path && (
                   <motion.div
                     layoutId="nav-underline"
-                    className="absolute bottom-0 left-0 right-0 h-0.5 bg-[color:var(--color-primary)]"
+                    className="absolute bottom-0 left-0 right-0 h-0.5 bg-(--color-primary)"
                   />
                 )}
               </Link>
@@ -81,7 +81,7 @@ const Header: React.FC = () => {
                 href="https://github.com" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="text-[color:var(--color-text-secondary)] hover:text-[color:var(--color-primary)] transition-colors"
+                className="text-(--color-text-secondary) hover:text-(--color-primary) transition-colors"
               >
                 <Github size={20} />
               </a>
@@ -89,7 +89,7 @@ const Header: React.FC = () => {
                 href="https://linkedin.com" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="text-[color:var(--color-text-secondary)] hover:text-[color:var(--color-primary)] transition-colors"
+                className="text-(--color-text-secondary) hover:text-(--color-primary) transition-colors"
               >
                 <Linkedin size={20} />
               </a>
@@ -97,7 +97,7 @@ const Header: React.FC = () => {
                 href="https://instagram.com" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="text-[color:var(--color-text-secondary)] hover:text-[color:var(--color-primary)] transition-colors"
+                className="text-(--color-text-secondary) hover:text-(--color-primary) transition-colors"
               >
                 <Instagram size={20} />
               </a>
@@ -106,7 +106,7 @@ const Header: React.FC = () => {
             {/* Theme Toggle */}
             <button 
               onClick={toggleTheme} 
-              className="p-2 rounded-full bg-opacity-20 hover:bg-opacity-30 transition-colors bg-[color:var(--color-primary)]"
+              className="p-2 rounded-full bg-opacity-20 hover:bg-opacity-30 transition-colors bg-(--color-primary)"
               aria-label={`Switch to ${theme === 'light' ? 'dark' : 'light'} mode`}
             >
               {theme === 'light' ? <Moon size={20} /> : <Sun size={20} />}
@@ -133,7 +133,7 @@ const Header: React.FC = () => {
           opacity: isMobileMenuOpen ? 1 : 0,
         }}
         transition={{ duration: 0.3 }}
-        className="md:hidden overflow-hidden bg-[color:var(--color-paper)]"
+        className="md:hidden overflow-hidden bg-(--color-paper)"
       >
         <div className="container mx-auto px-4 py-4">
           <nav className="flex flex-col space-y-4">
@@ -144,8 +144,8 @@ const Header: React.FC = () => {
                 aria-current={location.pathname === item.path ? 'page' : undefined}
                 className={`py-2 px-4 rounded-lg transition-colors ${
                   location.pathname === item.path
-                    ? 'bg-[color:var(--color-primary)] text-white'
-                    : 'text-[color:var(--color-text-primary)] hover:bg-opacity-5 hover:bg-[color:var(--color-primary)]'
+                    ? 'bg-(--color-primary) text-white'
+                    : 'text-(--color-text-primary) hover:bg-opacity-5 hover:bg-(--color-primary)'
                 }`}
               >
                 {item.name}
@@ -154,12 +154,12 @@ const Header: React.FC = () => {
           </nav>
           
           {/* Mobile Social Links */}
-          <div className="flex items-center space-x-4 mt-6 pt-6 border-t border-[color:var(--color-text-secondary)] border-opacity-20">
+          <div className="flex items-center space-x-4 mt-6 pt-6 border-t border-(--color-text-secondary) border-opacity-20">
             <a 
               href="https://github.com" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="p-2 text-[color:var(--color-text-secondary)] hover:text-[color:var(--color-primary)] transition-colors"
+              className="p-2 text-(--color-text-secondary) hover:text-(--color-primary) transition-colors"
             >
               <Github size={20} />
             </a>
@@ -167,7 +167,7 @@ const Header: React.FC = () => {
               href="https://linkedin.com" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="p-2 text-[color:var(--color-text-secondary)] hover:text-[color:var(--color-primary)] transition-colors"
+              className="p-2 text-(--color-text-secondary) hover:text-(--color-primary) transition-colors"
             >
               <Linkedin size={20} />
             </a>
@@ -175,7 +175,7 @@ const Header: React.FC = () => {
               href="https://instagram.com" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="p-2 text-[color:var(--color-text-secondary)] hover:text-[color:var(--color-primary)] transition-colors"
+              className="p-2 text-(--color-text-secondary) hover:text-(--color-primary) transition-colors"
             >
               <Instagram size={20} />
             </a>
