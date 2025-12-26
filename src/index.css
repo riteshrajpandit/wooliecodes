@@ -79,6 +79,29 @@
       opacity: 0;
     }
   }
+  
+  @keyframes border-rotate {
+    0% {
+      --angle: 0deg;
+      transform: rotate(0deg);
+    }
+    100% {
+      --angle: 360deg;
+      transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes border-spin {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
 }
 
 /*
@@ -110,6 +133,7 @@
 :root {
   /* Light mode */
   --color-primary-light: #3b4fd8;
+  --color-primary-rgb-light: 59, 79, 216;
   --color-secondary-light: #6366f1;
   --color-accent-light: #f43f5e;
   --color-background-light: #f8fafc;
@@ -119,12 +143,16 @@
 
   /* Dark mode */
   --color-primary-dark: #818cf8;
+  --color-primary-rgb-dark: 129, 140, 248;
   --color-secondary-dark: #a5b4fc;
   --color-accent-dark: #fb7185;
   --color-background-dark: #0f172a;
   --color-paper-dark: #1e293b;
   --color-text-primary-dark: #f1f5f9;
   --color-text-secondary-dark: #cbd5e1;
+  
+  /* Animation angle */
+  --angle: 0deg;
 }
 
 body {
@@ -133,6 +161,7 @@ body {
 
 .light {
   --color-primary: var(--color-primary-light);
+  --color-primary-rgb: var(--color-primary-rgb-light);
   --color-secondary: var(--color-secondary-light);
   --color-accent: var(--color-accent-light);
   --color-background: var(--color-background-light);
@@ -144,6 +173,7 @@ body {
 
 .dark {
   --color-primary: var(--color-primary-dark);
+  --color-primary-rgb: var(--color-primary-rgb-dark);
   --color-secondary: var(--color-secondary-dark);
   --color-accent: var(--color-accent-dark);
   --color-background: var(--color-background-dark);
@@ -297,4 +327,51 @@ p, .body {
 /* 3D canvas container */
 .canvas-container {
   @apply w-full h-[400px] md:h-[500px] lg:h-[600px] relative;
+}
+
+/* Neon border with progressive wrap effect */
+.neon-border-container {
+  position: relative;
+  border-radius: 0.5rem;
+}
+
+.neon-border-container::before {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  border-radius: 0.5rem;
+  border: 2px solid var(--color-primary);
+  opacity: 0;
+  pointer-events: none;
+  box-shadow: 
+    0 0 20px var(--color-primary),
+    0 0 40px var(--color-primary),
+    0 0 60px var(--color-primary),
+    inset 0 0 10px var(--color-primary);
+  filter: brightness(1.5);
+  z-index: 10;
+}
+
+.neon-border-container:hover::before {
+  animation: draw-border-rounded 2s ease-out forwards;
+}
+
+@keyframes draw-border-rounded {
+  0% {
+    opacity: 1;
+    clip-path: inset(0 100% 100% 0 round 0.5rem);
+  }
+  25% {
+    clip-path: inset(0 0 100% 0 round 0.5rem);
+  }
+  50% {
+    clip-path: inset(0 0 0 0 round 0.5rem);
+  }
+  75% {
+    clip-path: inset(0 0 0 0 round 0.5rem);
+  }
+  100% {
+    opacity: 1;
+    clip-path: inset(0 0 0 0 round 0.5rem);
+  }
 }
