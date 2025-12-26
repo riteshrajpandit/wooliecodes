@@ -88,16 +88,18 @@ const Gallery: React.FC = () => {
                 className="relative group cursor-pointer"
                 onClick={() => setSelectedImage(photo.src)}
               >
-                <div className="relative h-64 md:h-80 rounded-lg overflow-hidden">
+                <div className="relative h-64 md:h-80 rounded-lg overflow-hidden bg-gray-800">
                   <img 
                     src={photo.src} 
                     alt={photo.title}
+                    loading="lazy"
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    style={{ backgroundColor: 'transparent' }}
                   />
-                  <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-opacity duration-300" />
-                  <div className="absolute bottom-0 left-0 right-0 p-4 bg-linear-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <p className="text-white text-sm font-medium">{photo.category}</p>
-                    <h3 className="text-white text-lg font-bold">{photo.title}</h3>
+                  <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/20 group-hover:to-black/40 transition-all duration-300" />
+                  <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                    <p className="text-white text-sm font-medium drop-shadow-lg">{photo.category}</p>
+                    <h3 className="text-white text-lg font-bold drop-shadow-lg">{photo.title}</h3>
                   </div>
                 </div>
               </motion.div>

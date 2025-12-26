@@ -18,17 +18,19 @@ const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Logo and brief description */}
           <div className="md:col-span-2">
-            <Link to="/" className="text-2xl font-bold flex items-center mb-4">
-              <span className="code text-(--color-primary)">&lt;</span>
-              <span className="mx-1">DevJourney</span>
-              <span className="code text-(--color-primary)">/&gt;</span>
+            <Link to="/" className="inline-block ">
+              <img 
+                src="/logo/logo.svg" 
+                alt="Logo" 
+                className="h-40 w-90 object-contain align-middle"
+              />
             </Link>
             <p className="text-(--color-text-secondary) mb-6 max-w-md">
               Exploring the intersection of code, creativity, and storytelling. Join me on this journey through technology and art.
             </p>
             <div className="flex space-x-4">
               <a 
-                href="https://github.com" 
+                href="https://github.com/riteshrajpandit/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-(--color-text-secondary) hover:text-(--color-primary) transition-colors"
@@ -37,7 +39,7 @@ const Footer: React.FC = () => {
                 <Github size={24} />
               </a>
               <a 
-                href="https://linkedin.com" 
+                href="https://linkedin.com/in/riteshrajpandit/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-(--color-text-secondary) hover:text-(--color-primary) transition-colors"
@@ -46,7 +48,7 @@ const Footer: React.FC = () => {
                 <Linkedin size={24} />
               </a>
               <a 
-                href="https://twitter.com" 
+                href="https://x.com/riteshrajpandit/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-(--color-text-secondary) hover:text-(--color-primary) transition-colors"
@@ -55,7 +57,7 @@ const Footer: React.FC = () => {
                 <Twitter size={24} />
               </a>
               <a 
-                href="https://instagram.com" 
+                href="https://instagram.com/riteshrajpandit/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-(--color-text-secondary) hover:text-(--color-primary) transition-colors"
@@ -99,7 +101,7 @@ const Footer: React.FC = () => {
 
         {/* Bottom copyright */}
         <div className="border-t border-(--color-text-secondary) border-opacity-20 mt-12 pt-8 text-center text-(--color-text-secondary)">
-          <p>© {currentYear} DevJourney. All rights reserved.</p>
+          <p>© {currentYear} WoolieCodes. All rights reserved.</p>
           <p className="mt-2 text-sm">
             <span className="handwritten text-base">Crafted with passion and code</span>
           </p>
