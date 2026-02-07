@@ -44,7 +44,7 @@ const CodeLoader: React.FC<CodeLoaderProps> = ({ onFinish }) => {
       { text: " = ", color: "text-gray-200" },
       { text: "new", color: "text-pink-500" },
       { text: " ", color: "text-gray-200" },
-      { text: "DevJourney", color: "text-yellow-400" },
+      { text: "WoolieCodes", color: "text-yellow-400" },
       { text: "();", color: "text-gray-200" },
     ],
     [

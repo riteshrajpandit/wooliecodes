@@ -76,8 +76,8 @@ const Contact: React.FC = () => {
                     </div>
                     <div>
                       <h3 className="font-medium">Email</h3>
-                      <a href="mailto:contact@devjourney.com" className="text-(--color-primary) hover:underline">
-                        contact@devjourney.com
+                      <a href="mailto:wooliecodes@gmail.com" className="text-(--color-primary) hover:underline">
+                        wooliecodes@gmail.com
                       </a>
                     </div>
                   </div>
@@ -88,8 +88,8 @@ const Contact: React.FC = () => {
                     </div>
                     <div>
                       <h3 className="font-medium">Phone</h3>
-                      <a href="tel:+11234567890" className="text-(--color-primary) hover:underline">
-                        +1 (123) 456-7890
+                      <a href="tel:+977-98-437-00821" className="text-(--color-primary) hover:underline">
+                        +977-98-437-00821
                       </a>
                     </div>
                   </div>
@@ -100,7 +100,7 @@ const Contact: React.FC = () => {
                     </div>
                     <div>
                       <h3 className="font-medium">Location</h3>
-                      <p className="text-(--color-text-secondary)">San Francisco, CA</p>
+                      <p className="text-(--color-text-secondary)">Kathmandu, Nepal</p>
                     </div>
                   </div>
                 </div>
@@ -109,7 +109,7 @@ const Contact: React.FC = () => {
                   <h3 className="font-medium mb-4">Connect with me</h3>
                   <div className="flex space-x-4">
                     <a 
-                      href="https://linkedin.com" 
+                      href="https://linkedin.com/in/riteshrajpandit" 
                       target="_blank" 
                       rel="noopener noreferrer"
                       className="bg-(--color-background) p-3 rounded-full hover:bg-(--color-primary) hover:text-white transition-colors"
@@ -118,7 +118,7 @@ const Contact: React.FC = () => {
                       <Linkedin size={18} />
                     </a>
                     <a 
-                      href="https://github.com" 
+                      href="https://github.com/riteshrajpandit" 
                       target="_blank" 
                       rel="noopener noreferrer"
                       className="bg-(--color-background) p-3 rounded-full hover:bg-(--color-primary) hover:text-white transition-colors"
@@ -127,7 +127,7 @@ const Contact: React.FC = () => {
                       <Github size={18} />
                     </a>
                     <a 
-                      href="https://twitter.com" 
+                      href="https://twitter.com/riteshrajpandit" 
                       target="_blank" 
                       rel="noopener noreferrer"
                       className="bg-(--color-background) p-3 rounded-full hover:bg-(--color-primary) hover:text-white transition-colors"
@@ -147,15 +147,15 @@ const Contact: React.FC = () => {
                 
                 <div className="space-y-2">
                   <div className="flex justify-between">
-                    <span>Monday - Friday</span>
-                    <span className="font-medium">9:00 AM - 5:00 PM PST</span>
+                    <span>Sunday - Friday</span>
+                    <span className="font-medium">9:00 AM - 6:00 PM NPT</span>
                   </div>
                   <div className="flex justify-between">
                     <span>Saturday</span>
                     <span className="font-medium">By appointment</span>
                   </div>
                   <div className="flex justify-between">
-                    <span>Sunday</span>
+                    <span>Saturday</span>
                     <span className="font-medium">Closed</span>
                   </div>
                 </div>
