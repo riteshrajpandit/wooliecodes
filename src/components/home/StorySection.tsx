@@ -1,17 +1,7 @@
-import React, { useRef } from 'react';
-import { motion, useScroll, useTransform } from 'framer-motion';
+import React from 'react';
+import { motion } from 'framer-motion';
 
 const StorySection: React.FC = () => {
-  const containerRef = useRef<HTMLDivElement>(null);
-  
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ["start end", "end start"]
-  });
-  
-  const opacity = useTransform(scrollYProgress, [0, 0.2, 0.8, 1], [0, 1, 1, 0]);
-  const y = useTransform(scrollYProgress, [0, 0.2, 0.8, 1], [100, 0, 0, 100]);
-
   const storyItems = [
     {
       year: '2017',
@@ -47,9 +37,11 @@ const StorySection: React.FC = () => {
 
   return (
     <motion.div 
-      ref={containerRef}
       className="relative py-20 md:py-32 bg-(--color-background)"
-      style={{ opacity, y }}
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.8 }}
     >
       <div className="container mx-auto px-4 md:px-6">
         <div className="mb-16 text-center">
@@ -72,7 +64,7 @@ const StorySection: React.FC = () => {
                 key={index}
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-100px" }}
+                viewport={{ once: true }}
                 transition={{ duration: 0.7, delay: index * 0.1 }}
                 className={`relative flex flex-col ${
                   index % 2 === 0 

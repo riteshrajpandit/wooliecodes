@@ -437,8 +437,8 @@ p, .body {
     );
 }
 
-/* Base page styles */
-.book-page {
+/* Base page styles (scoped to Book component) */
+.book .book-page {
   position: absolute;
   top: 0;
   width: 50%;

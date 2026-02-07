@@ -34,21 +34,6 @@ const ArticlesPreview: React.FC = () => {
     },
   ];
 
-  const container = {
-    hidden: { opacity: 0 },
-    show: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2
-      }
-    }
-  };
-
-  const item = {
-    hidden: { opacity: 0, y: 20 },
-    show: { opacity: 1, y: 0, transition: { duration: 0.6 } }
-  };
-
   return (
     <div className="py-20 md:py-32 bg-(--color-paper)">
       <div className="container mx-auto px-4 md:px-6">
@@ -61,17 +46,14 @@ const ArticlesPreview: React.FC = () => {
           </p>
         </div>
         
-        <motion.div 
-          variants={container}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true, margin: "-100px" }}
-          className="grid grid-cols-1 md:grid-cols-3 gap-8"
-        >
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {articles.map((article, index) => (
             <motion.div 
               key={article.id}
-              variants={item}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: index * 0.2 }}
               className="bg-(--color-background) rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow flex flex-col h-full book-page"
             >
               <div className="relative h-48 overflow-hidden">
@@ -117,7 +99,7 @@ const ArticlesPreview: React.FC = () => {
               </div>
             </motion.div>
           ))}
-        </motion.div>
+        </div>
         
         <div className="mt-12 text-center">
           <Link to="/articles" className="btn btn-outline">

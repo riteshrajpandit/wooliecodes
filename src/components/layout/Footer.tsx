@@ -18,11 +18,15 @@ const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Logo and brief description */}
           <div className="md:col-span-2">
-            <Link to="/" className="inline-block ">
+            <Link to="/" className="inline-block -ml-8">
               <img 
                 src="/logo/logo.svg" 
                 alt="Logo" 
-                className="h-40 w-90 object-contain align-middle"
+                className="h-40 w-auto object-contain"
+                style={{ 
+                  filter: 'drop-shadow(0 0 0 var(--color-paper))',
+                  background: 'transparent'
+                }}
               />
             </Link>
             <p className="text-(--color-text-secondary) mb-6 max-w-md">

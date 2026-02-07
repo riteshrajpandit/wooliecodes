@@ -198,7 +198,7 @@ Connected successfully!`
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
+            viewport={{ once: true }}
             transition={{ duration: 0.7 }}
             className="code-editor rounded-xl overflow-hidden shadow-2xl"
           >
@@ -256,7 +256,7 @@ Connected successfully!`
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
+            viewport={{ once: true }}
             transition={{ duration: 0.7, delay: 0.3 }}
             className="mt-8 text-center text-(--color-text-secondary)"
           >
