@@ -44,10 +44,12 @@ const Header: React.FC = () => {
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link to="/" className="text-2xl font-bold flex items-center">
-            <span className="code text-(--color-primary)">&lt;</span>
-            <span className="mx-1">WoolieCodes</span>
-            <span className="code text-(--color-primary)">/&gt;</span>
+          <Link to="/" className="flex items-center">
+            <img 
+              src={theme === 'dark' ? '/logo/nav_logo_dark.svg' : '/logo/nav_logo_light.svg'} 
+              alt="WoolieCodes" 
+              className="h-8 sm:h-9 md:h-10 w-auto"
+            />
           </Link>
 
           {/* Desktop Navigation */}

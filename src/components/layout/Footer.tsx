@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Github, Linkedin, Instagram, Twitter, ArrowUp } from 'lucide-react';
+import { useTheme } from '../../context/ThemeContext';
 
 const Footer: React.FC = () => {
   const scrollToTop = () => {
@@ -11,6 +12,9 @@ const Footer: React.FC = () => {
   };
 
   const currentYear = new Date().getFullYear();
+  const { theme } = useTheme();
+
+  const logoSrc = theme === 'dark' ? '/logo/dark_logo.svg' : '/logo/logo.svg';
 
   return (
     <footer className="bg-(--color-paper) pt-16 pb-8">
@@ -20,7 +24,7 @@ const Footer: React.FC = () => {
           <div className="md:col-span-2">
             <Link to="/" className="inline-block -ml-8">
               <img 
-                src="/logo/logo.svg" 
+                src={logoSrc} 
                 alt="Logo" 
                 className="h-40 w-auto object-contain"
                 style={{ 
