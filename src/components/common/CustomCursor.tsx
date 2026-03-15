@@ -6,10 +6,12 @@ const CustomCursor: React.FC = () => {
   const [isPointer, setIsPointer] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
   const [isClicking, setIsClicking] = useState(false);
+  const [useNativeFallback, setUseNativeFallback] = useState(true);
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
       setPosition({ x: e.clientX, y: e.clientY });
+      setUseNativeFallback(false);
       
       // Check if hovering over clickable elements
       const target = e.target as HTMLElement;
@@ -34,13 +36,6 @@ const CustomCursor: React.FC = () => {
     document.addEventListener('mouseup', handleMouseUp);
     document.addEventListener('mouseleave', handleMouseLeave);
     document.addEventListener('mouseenter', handleMouseEnter);
-    
-    // Add cursor styles to body
-    document.body.classList.add('cursor-none');
-
-    // Add pointer-events-none to all links and buttons
-    const elements = document.querySelectorAll('a, button');
-    elements.forEach(el => el.classList.add('cursor-none'));
 
     return () => {
       document.removeEventListener('mousemove', handleMouseMove);
@@ -49,9 +44,21 @@ const CustomCursor: React.FC = () => {
       document.removeEventListener('mouseleave', handleMouseLeave);
       document.removeEventListener('mouseenter', handleMouseEnter);
       document.body.classList.remove('cursor-none');
-      elements.forEach(el => el.classList.remove('cursor-none'));
     };
   }, []);
+
+  useEffect(() => {
+    if (useNativeFallback) {
+      document.body.classList.remove('cursor-none');
+      return;
+    }
+
+    document.body.classList.add('cursor-none');
+
+    return () => {
+      document.body.classList.remove('cursor-none');
+    };
+  }, [useNativeFallback]);
 
   // Don't render custom cursor on mobile/touch devices
   if (typeof window !== 'undefined' && window.matchMedia('(hover: none)').matches) {

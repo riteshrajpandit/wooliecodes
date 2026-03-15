@@ -193,7 +193,8 @@ body {
 
 /* Custom cursor styles */
 .custom-cursor {
-  @apply fixed pointer-events-none z-50 mix-blend-difference;
+  @apply fixed pointer-events-none mix-blend-difference;
+  z-index: 2001;
   transform: translate(-50%, -50%);
 }
 
