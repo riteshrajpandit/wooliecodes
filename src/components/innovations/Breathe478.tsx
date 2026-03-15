@@ -1,4 +1,16 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import {
+  HelpCircle,
+  Moon,
+  Pause,
+  Play,
+  RotateCcw,
+  Settings,
+  SkipForward,
+  Sun,
+  Volume2,
+  VolumeX,
+} from 'lucide-react';
 import './Breathe478.css';
 
 type ViewMode = 'landing' | 'session' | 'complete';
@@ -531,16 +543,16 @@ const Breathe478 = () => {
             title="Toggle sound (S)"
             onClick={toggleSound}
           >
-            {soundOn ? '🔊' : '🔇'}
+            {soundOn ? <Volume2 size={18} strokeWidth={2} /> : <VolumeX size={18} strokeWidth={2} />}
           </button>
           <button className="icon-btn" aria-label="Toggle light mode" title="Toggle theme (T)" onClick={toggleTheme}>
-            {lightMode ? '🌙' : '☀️'}
+            {lightMode ? <Moon size={18} strokeWidth={2} /> : <Sun size={18} strokeWidth={2} />}
           </button>
           <button className="icon-btn" aria-label="Open settings" title="Settings" onClick={() => setSettingsOpen(true)}>
-            ⚙️
+            <Settings size={18} strokeWidth={2} />
           </button>
           <button className="icon-btn" aria-label="How it works" title="Help" onClick={() => setHelpOpen(true)}>
-            ?
+            <HelpCircle size={18} strokeWidth={2} />
           </button>
         </div>
       </header>
@@ -675,7 +687,7 @@ const Breathe478 = () => {
 
           <div className="session-controls">
             <button className="ctrl-btn" aria-label="Reset session" title="Reset (R)" onClick={() => void resetSession()}>
-              ↺
+              <RotateCcw size={18} strokeWidth={2} />
             </button>
             <button
               className="ctrl-btn primary"
@@ -692,10 +704,10 @@ const Breathe478 = () => {
                 }
               }}
             >
-              {paused ? '▶' : '⏸'}
+              {paused ? <Play size={18} strokeWidth={2} /> : <Pause size={18} strokeWidth={2} />}
             </button>
             <button className="ctrl-btn" aria-label="Skip to next phase" title="Skip phase (→)" onClick={skipPhase}>
-              ⏭
+              <SkipForward size={18} strokeWidth={2} />
             </button>
           </div>
         </section>
@@ -703,7 +715,9 @@ const Breathe478 = () => {
 
       {view === 'complete' && (
         <section className="view complete" role="main" aria-label="Session complete">
-          <div className="complete-icon" aria-hidden="true">🌙</div>
+          <div className="complete-icon" aria-hidden="true">
+            <Moon size={34} strokeWidth={2} />
+          </div>
           <h2 className="complete-title">Well done.</h2>
           <p className="complete-sub">
             Your nervous system has shifted. Notice the stillness. Your body knows how to rest, you just gave it the signal.
