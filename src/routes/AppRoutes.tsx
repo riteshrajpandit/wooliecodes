@@ -15,6 +15,7 @@ const NotFound = lazy(() => import('../pages/NotFound'));
 const PrivacyPolicy = lazy(() => import('../pages/PrivacyPolicy'));
 const TermsOfUse = lazy(() => import('../pages/TermsOfUse'));
 const Sitemap = lazy(() => import('../pages/Sitemap'));
+const InnovationPage = lazy(() => import('../pages/InnovationPage'));
 
 // Loading component
 const PageLoader = () => (
@@ -41,6 +42,7 @@ const AppRoutes: React.FC = () => {
         <Route path="/privacy" element={<Layout><PrivacyPolicy /></Layout>} />
         <Route path="/terms" element={<Layout><TermsOfUse /></Layout>} />
         <Route path="/sitemap" element={<Layout><Sitemap /></Layout>} />
+        <Route path="/innovations/:id" element={<InnovationPage />} />
         <Route path="*" element={<Layout><NotFound /></Layout>} />
       </Routes>
     </Suspense>
