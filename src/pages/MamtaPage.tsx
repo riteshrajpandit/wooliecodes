@@ -366,7 +366,7 @@ const QUIZ_DATA = [
   },
   {
     question: "Do you think I'm a good texter?",
-    answer: "I'm going to be honest — no. But I know I can do better. You deserve better. And I'm working on it. 😄",
+    answer: "I guess i am not, But I know I can do better. And I'm working on it. 😄",
   },
   {
     question: "What do you think I noticed first about you?",
