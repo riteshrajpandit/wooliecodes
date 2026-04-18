@@ -100,13 +100,13 @@ const CodeLoader: React.FC<CodeLoaderProps> = ({ onFinish }) => {
     return () => document.removeEventListener('visibilitychange', handleVisibility);
   }, []);
 
+  const currentGreeting = greetings[currentIndex];
+
   useEffect(() => {
     if (langVisible) {
       setVisibleLang(currentGreeting.lang);
     }
   }, [langVisible, currentGreeting.lang]);
-
-  const currentGreeting = greetings[currentIndex];
 
   return (
     <motion.div
