@@ -1,7 +1,6 @@
 import React, { lazy, Suspense } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Layout from '../components/layout/Layout';
-import MamtaPage from '../pages/MamtaPage';
 
 // Lazy load page components
 const Home = lazy(() => import('../pages/Home'));
@@ -45,7 +44,6 @@ const AppRoutes: React.FC = () => {
         <Route path="/sitemap" element={<Layout><Sitemap /></Layout>} />
         <Route path="/innovations/:id" element={<InnovationPage />} />
         <Route path="*" element={<Layout><NotFound /></Layout>} />
-        <Route path="/mamta" element={<MamtaPage />} />
       </Routes>
     </Suspense>
   );
