@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, useAnimation } from 'framer-motion';
-import { Send, Mail, Phone, MapPin, Linkedin, Github, Twitter } from 'lucide-react';
+import { Send, Mail, Phone, MapPin, Linkedin, Github as GitHub, Twitter } from 'lucide-react';
 
 const Contact: React.FC = () => {
   const [formState, setFormState] = useState({
@@ -124,7 +124,7 @@ const Contact: React.FC = () => {
                       className="bg-(--color-background) p-3 rounded-full hover:bg-(--color-primary) hover:text-white transition-colors"
                       aria-label="GitHub"
                     >
-                      <Github size={18} />
+                      <GitHub size={18} />
                     </a>
                     <a 
                       href="https://twitter.com/riteshrajpandit" 

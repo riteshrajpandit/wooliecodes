@@ -101,10 +101,10 @@ const CodeLoader: React.FC<CodeLoaderProps> = ({ onFinish }) => {
   }, []);
 
   useEffect(() => {
-  if (langVisible) {
-    setVisibleLang(currentGreeting.lang);
-  }
-}, [currentIndex]);
+    if (langVisible) {
+      setVisibleLang(currentGreeting.lang);
+    }
+  }, [langVisible, currentGreeting.lang]);
 
   const currentGreeting = greetings[currentIndex];
 

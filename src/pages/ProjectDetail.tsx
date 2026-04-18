@@ -1,7 +1,7 @@
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Github, ExternalLink, Calendar, ArrowLeft } from 'lucide-react';
+import { Github as GitHub, ExternalLink, Calendar, ArrowLeft } from 'lucide-react';
 
 const ProjectDetail: React.FC = () => {
   const { id } = useParams();
@@ -226,7 +226,7 @@ const ProjectDetail: React.FC = () => {
                   rel="noopener noreferrer"
                   className="btn btn-outline flex items-center"
                 >
-                  <Github size={20} className="mr-2" />
+                  <GitHub size={20} className="mr-2" />
                   View Source
                 </a>
                 <a 

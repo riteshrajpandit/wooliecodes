@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { Github, ExternalLink } from 'lucide-react';
+import { Github as GitHub, ExternalLink } from 'lucide-react';
 
 const Projects: React.FC = () => {
   const projects = [
@@ -117,7 +117,7 @@ const Projects: React.FC = () => {
                         rel="noopener noreferrer"
                         className="p-2 rounded-full bg-(--color-background) hover:bg-(--color-primary) hover:text-white transition-colors"
                       >
-                        <Github size={18} />
+                        <GitHub size={18} />
                       </a>
                       <a
                         href={project.live}
@@ -194,7 +194,7 @@ const Projects: React.FC = () => {
                           rel="noopener noreferrer"
                           className="p-2 rounded-full bg-(--color-background) hover:bg-(--color-primary) hover:text-white transition-colors"
                         >
-                          <Github size={18} />
+                          <GitHub size={18} />
                         </a>
                         <Link
                           to={`/innovations/${project.id}`}

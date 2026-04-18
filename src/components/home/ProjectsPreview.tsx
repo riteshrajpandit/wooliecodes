@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { ArrowRight, Github, ExternalLink } from 'lucide-react';
+import { ArrowRight, Github as GitHub, ExternalLink } from 'lucide-react';
 
 const ProjectsPreview: React.FC = () => {
   const projects = [
@@ -105,7 +105,7 @@ const ProjectsPreview: React.FC = () => {
                       className="p-2 rounded-full bg-(--color-background) hover:bg-(--color-primary) hover:text-white transition-colors"
                       aria-label="GitHub Repository"
                     >
-                      <Github size={18} />
+                      <GitHub size={18} />
                     </a>
                     <a 
                       href={project.live} 

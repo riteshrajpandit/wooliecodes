@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Menu, X, Moon, Sun, Github, Linkedin, Instagram } from 'lucide-react';
-import { useTheme } from '../../context/ThemeContext';
+import { Menu, X, Moon, Sun, Github as GitHub, Linkedin, Instagram } from 'lucide-react';
+import { useTheme } from '../../context/useTheme';
 
 const Header: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -85,7 +85,7 @@ const Header: React.FC = () => {
                 rel="noopener noreferrer"
                 className="text-(--color-text-secondary) hover:text-(--color-primary) transition-colors"
               >
-                <Github size={20} />
+                <GitHub size={20} />
               </a>
               <a 
                 href="https://linkedin.com" 
@@ -163,7 +163,7 @@ const Header: React.FC = () => {
               rel="noopener noreferrer"
               className="p-2 text-(--color-text-secondary) hover:text-(--color-primary) transition-colors"
             >
-              <Github size={20} />
+              <GitHub size={20} />
             </a>
             <a 
               href="https://linkedin.com" 

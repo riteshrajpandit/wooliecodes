@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Github, Linkedin, Instagram, Twitter, ArrowUp } from 'lucide-react';
-import { useTheme } from '../../context/ThemeContext';
+import { Github as GitHub, Linkedin, Instagram, Twitter, ArrowUp } from 'lucide-react';
+import { useTheme } from '../../context/useTheme';
 
 const Footer: React.FC = () => {
   const scrollToTop = () => {
@@ -44,7 +44,7 @@ const Footer: React.FC = () => {
                 className="text-(--color-text-secondary) hover:text-(--color-primary) transition-colors"
                 aria-label="GitHub"
               >
-                <Github size={24} />
+                <GitHub size={24} />
               </a>
               <a 
                 href="https://linkedin.com/in/riteshrajpandit/" 
