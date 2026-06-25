@@ -5,6 +5,7 @@ import { ThemeProvider } from './context/ThemeContext';
 import { motion } from 'framer-motion';
 import CustomCursor from './components/common/CustomCursor';
 import '@fontsource/urbanist/400.css';
+
 import '@fontsource/urbanist/500.css';
 import '@fontsource/urbanist/700.css';
 import '@fontsource/fira-code/400.css';
