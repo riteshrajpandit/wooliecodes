@@ -80,7 +80,7 @@ const Header: React.FC = () => {
             {/* Social Media Links (Desktop) */}
             <div className="hidden md:flex items-center space-x-3">
               <a 
-                href="https://github.com" 
+                href="https://github.com/riteshrajpandit" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-(--color-text-secondary) hover:text-(--color-primary) transition-colors"
@@ -88,7 +88,7 @@ const Header: React.FC = () => {
                 <GitHub size={20} />
               </a>
               <a 
-                href="https://linkedin.com" 
+                href="https://linkedin.com/riteshrajpandit" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-(--color-text-secondary) hover:text-(--color-primary) transition-colors"
@@ -96,7 +96,7 @@ const Header: React.FC = () => {
                 <Linkedin size={20} />
               </a>
               <a 
-                href="https://instagram.com" 
+                href="https://instagram.com/riteshrajpandit" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-(--color-text-secondary) hover:text-(--color-primary) transition-colors"
