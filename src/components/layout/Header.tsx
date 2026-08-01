@@ -88,7 +88,7 @@ const Header: React.FC = () => {
                 <GitHub size={20} />
               </a>
               <a 
-                href="https://linkedin.com/riteshrajpandit" 
+                href="https://www.linkedin.com/in/riteshrajpandit/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-(--color-text-secondary) hover:text-(--color-primary) transition-colors"
