@@ -142,3 +142,5 @@ greeting-loader (1).html
 .claude
 CLAUDE.md
 vibecode.md
+new_hero_section
+src/components/home/Hero_old.tsx
