@@ -12,54 +12,25 @@ type Greeting = {
 };
 
 const greetings: Greeting[] = [
-  { word: 'Hello',        lang: 'English',    italic: false },
-  { word: 'Bonjour',      lang: 'French',     italic: true  },
-  { word: 'नमस्ते',         lang: 'Nepali',     italic: false },
-  { word: 'जोजोलप्पा',     lang: 'Newar',      italic: true  },
-  { word: 'फ्याफुल्ला',    lang: 'Tamang',     italic: false },
-  { word: 'झोरले',         lang: 'Magar',      italic: true  },
-  { word: 'सेउली',         lang: 'Rai',        italic: false },
-  { word: 'नमस्कार',       lang: 'Marathi',    italic: true  },
-  { word: 'வணக்கம்',       lang: 'Tamil',      italic: false },
-  { word: 'నమస్కారం',      lang: 'Telugu',     italic: true  },
-  { word: 'নমস্কার',       lang: 'Bengali',    italic: false },
-  { word: 'નમસ્તે',        lang: 'Gujarati',   italic: true  },
-  { word: 'ਸਤਿ ਸ੍ਰੀ ਅਕਾਲ', lang: 'Punjabi',    italic: false },
-  { word: 'नमस्कार',       lang: 'Konkani',    italic: true  },
-  { word: 'नमस्ते',        lang: 'Hindi',      italic: false },
-  { word: 'Halo',         lang: 'Indonesian', italic: true  },
-  { word: 'Xin chào',     lang: 'Vietnamese', italic: false },
-  { word: 'Kamusta',      lang: 'Tagalog',    italic: true  },
-  { word: 'Salaam',       lang: 'Persian',    italic: false },
-  { word: 'Cześć',        lang: 'Polish',     italic: true  },
-  { word: 'Sawatdee',     lang: 'Thai',       italic: false },
-  { word: 'Jambo',        lang: 'Swahili',    italic: true  },
-  { word: 'Ahoj',         lang: 'Czech',      italic: false },
-  { word: 'Bula',         lang: 'Fijian',     italic: true  },
-  { word: 'Hola',         lang: 'Spanish',    italic: true  },
-  { word: 'こんにちは',     lang: 'Japanese',   italic: false },
-  { word: 'Ciao',         lang: 'Italian',    italic: true  },
-  { word: 'Olá',          lang: 'Portuguese', italic: false },
-  { word: 'مرحبا',        lang: 'Arabic',     italic: true  },
-  { word: 'Привет',       lang: 'Russian',    italic: false },
-  { word: 'Nǐ Hǎo',      lang: 'Mandarin',   italic: true  },
-  { word: '안녕하세요',    lang: 'Korean',     italic: false },
-  { word: 'Merhaba',      lang: 'Turkish',    italic: true  },
-  { word: 'Guten Tag',    lang: 'German',     italic: false },
-  { word: 'Sawubona',     lang: 'Zulu',       italic: true  },
-  { word: 'Yassas',       lang: 'Greek',      italic: false },
+  { word: 'Hello', lang: 'English', italic: false },
+  { word: 'नमस्ते', lang: 'Nepali', italic: false },
+  { word: 'Hola', lang: 'Spanish', italic: true },
+  { word: 'こんにちは', lang: 'Japanese', italic: false },
+  { word: 'Ciao', lang: 'Italian', italic: true },
+  { word: 'Nǐ Hǎo', lang: 'Mandarin', italic: true },
+  { word: 'Bonjour', lang: 'French', italic: true },
 ];
 
 const GREETING_STEP_MS = 2200;
-const FINISH_DELAY_MS  = 1200;
+const FINISH_DELAY_MS = 1200;
 
 const CodeLoader: React.FC<CodeLoaderProps> = ({ onFinish }) => {
-  const [currentIndex,    setCurrentIndex]    = useState(0);
+  const [currentIndex, setCurrentIndex] = useState(0);
   const [dividerExpanded, setDividerExpanded] = useState(false);
   // Separate state keeps the lang label outside AnimatePresence,
   // so it never flies in/out with the greeting word.
-  const [visibleLang,     setVisibleLang]     = useState('');
-  const [langVisible,     setLangVisible]     = useState(false);
+  const [visibleLang, setVisibleLang] = useState('');
+  const [langVisible, setLangVisible] = useState(false);
 
   // Restore cursor on unmount
   useEffect(() => {
@@ -168,8 +139,8 @@ const CodeLoader: React.FC<CodeLoaderProps> = ({ onFinish }) => {
                 fontStyle: currentGreeting.italic ? 'italic' : 'normal',
               }}
               initial={{ opacity: 0, y: 22, scale: 0.97 }}
-              animate={{ opacity: 1, y: 0,  scale: 1    }}
-              exit={{    opacity: 0, y: -18, scale: 1.02 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              exit={{ opacity: 0, y: -18, scale: 1.02 }}
               // FIX: distinct, faster exit to match original 0.45s ease
               transition={{
                 duration: 0.7,
@@ -178,10 +149,10 @@ const CodeLoader: React.FC<CodeLoaderProps> = ({ onFinish }) => {
               }}
               aria-label={`${currentGreeting.word} — ${currentGreeting.lang}`}
               tabIndex={0}
-              onMouseEnter={() => { setVisibleLang(currentGreeting.lang); setLangVisible(true);  }}
+              onMouseEnter={() => { setVisibleLang(currentGreeting.lang); setLangVisible(true); }}
               onMouseLeave={() => setLangVisible(false)}
-              onFocus={()      => { setVisibleLang(currentGreeting.lang); setLangVisible(true);  }}
-              onBlur={()       => setLangVisible(false)}
+              onFocus={() => { setVisibleLang(currentGreeting.lang); setLangVisible(true); }}
+              onBlur={() => setLangVisible(false)}
             >
               {currentGreeting.word}
             </motion.span>
@@ -209,9 +180,8 @@ const CodeLoader: React.FC<CodeLoaderProps> = ({ onFinish }) => {
 
         {/* Divider */}
         <div
-          className={`h-px bg-gradient-to-r from-transparent via-[#d4c5ae] to-transparent transition-[width] duration-1000 ${
-            dividerExpanded ? 'w-[clamp(80px,12vw,160px)]' : 'w-0'
-          }`}
+          className={`h-px bg-gradient-to-r from-transparent via-[#d4c5ae] to-transparent transition-[width] duration-1000 ${dividerExpanded ? 'w-[clamp(80px,12vw,160px)]' : 'w-0'
+            }`}
           aria-hidden="true"
         />
       </div>
