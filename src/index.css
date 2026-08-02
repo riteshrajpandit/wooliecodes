@@ -199,8 +199,9 @@ body {
 }
 
 /* Disable default cursor when using custom cursor */
-.cursor-none {
-  cursor: none;
+.cursor-none,
+.cursor-none * {
+  cursor: none !important;
 }
 
 /* Hide custom cursor on touch devices */
